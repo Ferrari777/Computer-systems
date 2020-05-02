@@ -22,13 +22,13 @@ vector <long long> findDividers(long long number)
 	return dividers;
 }
 
-/*void printDividers(vector <long long> dvdrs, long long number)
+void printDividers(vector <long long> dvdrs, long long number)
 {
 	int i = 0;
 	cout << "Number for which find dividers: " << number << endl;
 	for (vector<long long>::iterator it = dvdrs.begin(); it != dvdrs.end(); ++it, ++i)
 		cout << i << " divider : " << *it << endl;
-}*/
+}
 
 int main()
 {
