@@ -25,7 +25,7 @@ for optmzFlag in ${flagsForIccOptmztion[@]}
 do
         for iccFlag in $flagsForIccCpu
         do
-                srcfile="iccResult$iccFlag"
+                srcfile="iccResult$iccFlag$optmzFlag"
                 icc -$optmzFlag -qopt-report-phase=vec program.cpp -o $srcfile -lm -x$iccFlag 2> errors.txt
                 if [ $? -eq 0 ]
                 then
