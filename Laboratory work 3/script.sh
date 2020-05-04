@@ -26,12 +26,10 @@ do
         for iccFlag in $flagsForIccCpu
         do
                 srcfile="iccResult$iccFlag"
-                icc -$optmzFlag -qopt-report-phase=vec program.cpp -o $srcfile -l
-m -x$iccFlag 2> errors.txt
+                icc -$optmzFlag -qopt-report-phase=vec program.cpp -o $srcfile -lm -x$iccFlag 2> errors.txt
                 if [ $? -eq 0 ]
                 then
-                        echo "icc compilation with -$optmzFlag flag and $iccFlag 
-cpu extension:"
+                        echo "icc compilation with -$optmzFlag flag and $iccFlag cpu extension:"
                         time ./$srcfile
                         echo -e "\n"
                 fi
